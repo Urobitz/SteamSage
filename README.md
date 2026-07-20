@@ -49,4 +49,4 @@ The plan is to keep improving the tool as I learn new skills but some goals are:
 This is a personal project used to learn python skills, html, and AI capabilities.
 
 ## License
-MIT, GPL, etc.
+MIT
