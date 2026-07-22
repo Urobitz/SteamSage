@@ -22,13 +22,13 @@ def get_reviews(page, title, game_id,file_writer):
             page.wait_for_timeout(1000)
 
             try:
-                # Espera hasta 3s a que aparezcan MÁS tarjetas que current_count
+                
                 page.wait_for_function(
                     f"document.querySelectorAll('.apphub_UserReviewCardContent').length > {current_count}",
-                    timeout=3000
+                    timeout=2000
                 )
             except Exception:
-                # No llegó nada nuevo en 3s -> asumimos que ya no hay más reviews
+                #if nothing appears in two seconds, assume there is no more reviews
                 break
 
         return review_blocks.count()
